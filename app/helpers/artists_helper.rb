@@ -1,5 +1,6 @@
 module ArtistsHelper
   def display_artist(song)
-    song.artist_name if song.artist.present?
+    if song.artist.present?
+      <%= link_to song.artist_name, artist_path(song.artist)
   end
 end
